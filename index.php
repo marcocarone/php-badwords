@@ -29,16 +29,16 @@ Visualizzare a schermo il paragrafo con la relative lunghezza e sostituire la ba
   <p> <?php echo $testo; ?></p>
   <h2>Testo censurato:</h2>
   <h3>Lunghezza testo: <?php echo strlen($testo_censurato); ?></h3>
-  <p>
+
     <?php
     // Controllo se nel testo c'è la parola inserita nel parametro GET
       if (strpos($testo, $parola_censurata) > 0) {
-        echo "<p><strong>Testo censurato: </strong>". $testo_censurato . "</p>";
+        echo "<p>". $testo_censurato . "</p>";
       } else {
         echo " <h3>La parola " . $parola_censurata . " non è presente nel testo</h3>";
       }
     ?>
-  </p>
+
 </body>
 
 </html>
